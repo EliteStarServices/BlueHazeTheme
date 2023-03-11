@@ -3,10 +3,11 @@
 ---
 
 ### v0.9.9.6
-2023-03-xx
+2023-03-11
 
 * Multisite Fix: /bluehaze Folder, BH Template
 * CSS / JS Reconfiguration - jsDelivr for Global
+* Publish Public BlueHaze Project to GitHub
 
 ### v0.9.9.5
 2023-03-03
