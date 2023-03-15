@@ -358,12 +358,12 @@ color:#FFFFFF;
 
 /* EXTRA BITS OF STYLE */
 .pullup {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
   }
 
-.zero-margins {
-	margin-top: 0px;
-	margin-bottom: 0px;
+.min-margins {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .neg-margins {
@@ -377,11 +377,11 @@ color:#FFFFFF;
 }
 
 .footer-thin {
-	margin-top: -15px;
+  margin-top: -15px;
 }
 
 .header-thin {
-	margin-top: -10px;
+  margin-top: -10px;
 }
 
 .no-post-border {
