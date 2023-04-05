@@ -411,13 +411,16 @@ function theme_support_options() {
            'transport' => 'refresh',
        ) );
    
+
+       /*
        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
            'label'    => __( 'Header Color', 'blue-haze' ),
            'section'  => 'header_section',
            'settings' => 'header_bg',
        ) ) );
+       */
 
-
+       
        $wp_customize->add_setting( 'header_rd' , array(
        'default'   => '6',
        'transport' => 'refresh',
