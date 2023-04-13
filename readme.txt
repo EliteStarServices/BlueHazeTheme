@@ -3,7 +3,7 @@ Author: Elite Star Services
 Author URI: https://elite-star-services.com
 Donate link: https://www.paypal.com/donate/?hosted_button_id=P3CXN3JZVSVG2
 Requires at least: 4.0
-Tested up to: 6.1.1
+Tested up to: 6.2
 License: GPL v3
 License URI: https://elite-star-services.com/license/
 
@@ -21,6 +21,12 @@ This theme can use all Bootstrap classes, elements and styles.
 
 
 ==Changelog==
+
+### v0.9.9.7
+2023-04-13
+
+* Compatibility - WP v6.2
+* Add Post Template - Header Control
 
 ### v0.9.9.6
 2023-03-11

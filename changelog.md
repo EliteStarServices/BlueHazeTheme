@@ -2,6 +2,12 @@
 
 ---
 
+### v0.9.9.7
+2023-04-13
+
+* Compatibility - WP v6.2
+* Add Post Template - Header Control
+
 ### v0.9.9.6
 2023-03-11
 
