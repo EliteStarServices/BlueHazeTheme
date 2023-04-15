@@ -22,6 +22,12 @@ This theme can use all Bootstrap classes, elements and styles.
 
 ==Changelog==
 
+### v0.9.9.8
+2023-04-xx
+
+* Additional Post Template Adjustments
+* Add Option for Header on Archive Pages
+
 ### v0.9.9.7
 2023-04-13
 

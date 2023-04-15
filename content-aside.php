@@ -4,7 +4,7 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('no-post-border'); ?> style="background:white;">
-	<div class="entry-content">
+	<div class="entry-content" style="margin-top:5px;">
 <div class="row">
 <div class="col-md-12">
 <div class="panel panel-default">

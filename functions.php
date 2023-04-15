@@ -432,9 +432,19 @@ function theme_support_options() {
        'settings' => 'header_rd',
        ) );
 
+       $wp_customize->add_setting( 'header_ap', array(
+        'default'   => false,
+        'transport' => 'refresh',
+         ) );
+        
+        $wp_customize->add_control( 'header_ap', array(
+        'section'   => 'header_section',
+        'label'     => 'Show Header on Archive Pages?',
+        'type'      => 'checkbox'
+        ) );
 
        $wp_customize->add_setting( 'header_mg', array(
-        'default'   => true,
+        'default'   => false,
         'transport' => 'refresh',
          ) );
         

@@ -4,7 +4,7 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('no-post-border'); ?>>
-	<header class="entry-header panel panel-default panel-body">
+	<header class="entry-header panel panel-default panel-body" style="margin-top:5px;">
 		<h3 class="entry-title" style="margin-top:-5px;"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 
 		<?php if ('post' == get_post_type()) { ?> 

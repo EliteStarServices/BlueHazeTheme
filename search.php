@@ -5,7 +5,12 @@
  * @package bootstrap-basic
  */
 
-get_header();
+// Show Header?
+if (esc_html( get_theme_mod('header_ap') == "1") ) {
+	get_header('title');
+} else {
+	get_header();
+}
 
 /**
  * determine main column size from active sidebar

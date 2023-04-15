@@ -1,4 +1,13 @@
-<?php get_header(); ?> 
+<?php 
+
+// Show Header?
+if (esc_html( get_theme_mod('header_ap') == "1") ) {
+	get_header('title');
+} else {
+	get_header();
+} 
+
+?> 
 
 				<div class="col-md-12 content-area" id="main-column">
 					<main id="main" class="site-main" role="main">
