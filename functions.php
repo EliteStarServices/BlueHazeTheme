@@ -439,7 +439,7 @@ function theme_support_options() {
         
         $wp_customize->add_control( 'header_ap', array(
         'section'   => 'header_section',
-        'label'     => 'Show Header on Archive Pages?',
+        'label'     => 'Show Header on Internal Templates?',
         'type'      => 'checkbox'
         ) );
 
