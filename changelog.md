@@ -3,7 +3,7 @@
 ---
 
 ### v0.9.9.8
-2023-04-xx
+2023-04-19
 
 * Additional Post Template Adjustments
 * Add Header Option for Remaining Templates

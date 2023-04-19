@@ -83,6 +83,15 @@ function blue_haze_register_required_plugins() {
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://cs.elite-star-services.com/wp-repo/?action=download&slug=bh-menu-icons', // If set, overrides default API URL and points to an external URL.
 		),
+
+		// This is an example of how to include a plugin from an arbitrary external source in your theme.
+		array(
+			'name'         => 'BH Plugin Tools', // The plugin name.
+			'slug'         => 'bh-plugin-tools', // The plugin slug (typically the folder name).
+			'source'       => 'https://cs.elite-star-services.com/wp-repo/?action=download&slug=bh-plugin-tools', // The plugin source.
+			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+			'external_url' => 'https://cs.elite-star-services.com/wp-repo/?action=download&slug=bh-plugin-tools', // If set, overrides default API URL and points to an external URL.
+		),
 		
 /*
 		// This is an example of how to include a plugin from a GitHub repository in your theme.
@@ -100,13 +109,6 @@ function blue_haze_register_required_plugins() {
 		array(
 			'name'      => 'Classic Editor',
 			'slug'      => 'classic-editor',
-			'required'  => false,
-		),
-
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'Custom Sidebars',
-			'slug'      => 'custom-sidebars',
 			'required'  => false,
 		),
 
@@ -160,6 +162,13 @@ if ($extraPI != "") {
 		array(
 			'name'      => 'Custom Classes',
 			'slug'      => 'custom-classes',
+			'required'  => false,
+		),
+
+		// This is an example of how to include a plugin from the WordPress Plugin Repository.
+		array(
+			'name'      => 'Custom Sidebars',
+			'slug'      => 'custom-sidebars',
 			'required'  => false,
 		),
 

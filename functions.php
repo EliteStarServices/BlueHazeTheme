@@ -530,7 +530,7 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 
 
 // BLUE HAZE ADMIN NOTIFICATION
-// v0.9.9.4 REQUIRES ANNOUNCEMENT
+// v0.9.9.4 REQUIRED ANNOUNCEMENT
 // Post Template Select plugin was depreciated
 if (is_admin()) {
     require_once get_template_directory() . '/inc/BlueHazeNotify.php';
