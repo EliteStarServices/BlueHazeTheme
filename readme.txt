@@ -22,6 +22,11 @@ This theme can use all Bootstrap classes, elements and styles.
 
 ==Changelog==
 
+### v0.9.9.9 / v1.0
+2023-x-x
+
+* More Post Template Adjustments
+
 ### v0.9.9.8
 2023-04-19
 
