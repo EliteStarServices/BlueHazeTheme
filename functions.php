@@ -354,14 +354,19 @@ if( class_exists( 'Classic_Editor' ) ) {
     $BbWp5 = new BootstrapBasicWp5();
     unset($BbWp5);
 
+
+    /*
+    // FATAL ERROR / php8
     // check if there are any calendar widget blocs.
     if (bootstrapBasicHasWidgetBlock('calendar') === true) {
         // if theme using widget blocks enqueue css to fix calendar widget block to render as non widget block.
         // if you would like it to be render as new widget block, please dequeue this handle.
         wp_enqueue_style('bootstrapbasic-widgetblocks-calendar', get_template_directory_uri() . '/css/widget-blocks/calendar.css', array(), $themeVersion);
     }
-}
+    */
 
+    
+}
 
 
 

@@ -75,7 +75,7 @@ if ( ! class_exists( 'BH_Widget' ) ) {
 		</div>
 		<div style="display: flex; justify-content: space-between;align-items: center;margin: 16px -12px 0;padding: 12px 12px 0; border-top: 1px solid #eee;">
 			<?php esc_html_e( 'Please visit our website.', 'blue-haze' ); ?>
-			<a class="button-primary" href="<?php printf( 'https://elite-star-services.com', WPMI_PREFIX ); ?>"><?php esc_html_e( 'Elite Star Services', 'blue-haze' ); ?></a>
+			<a class="button-primary" href="<?php printf( 'https://elite-star-services.com', 'blue-haze' ); ?>"><?php esc_html_e( 'Elite Star Services', 'blue-haze' ); ?></a>
 		</div>
 			<?php
 		}
