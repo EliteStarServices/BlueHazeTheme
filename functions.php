@@ -420,7 +420,7 @@ function theme_support_options() {
        ) );
    
 
-// This was blocked, but I am not sure why - it controls headfer background color
+// This was blocked, but I am not sure why - it controls header background color
        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
            'label'    => __( 'Header Color', 'blue-haze' ),
            'section'  => 'header_section',
