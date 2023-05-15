@@ -208,7 +208,11 @@ if ( ! class_exists( 'WPEX_Theme_Options' ) ) {
 						<tr valign="top" class="wpex-custom-admin-screen-background-section">
 							<th scope="row"><?php esc_html_e( 'Offer BH Template', 'text-domain' ); ?></th>
 							<td>
-								<?php $value = self::get_theme_option( 'select_templates' ); ?>
+								<?php 
+								$value = self::get_theme_option( 'select_templates' ); 
+								// php8 is not as forgiving, empty array $value fixed here
+								if (!$value) { $value = array("empty"); }
+								?>
 								<select multiple="multiple" name="theme_options[select_templates][]">
 									<?php
 									$options = get_post_types(array(
