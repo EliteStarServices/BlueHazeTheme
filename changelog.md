@@ -6,6 +6,7 @@
 2023-x-x
 
 * More Post Template Adjustments
+* PHP 8 Compatibility
 
 ### v0.9.9.8
 2023-04-19
