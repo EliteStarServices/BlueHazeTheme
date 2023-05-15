@@ -3,7 +3,7 @@
 ---
 
 ### v0.9.9.9 / v1.0
-2023-x-x
+2023-xx-xx
 
 * More Post Template Adjustments
 * PHP 8 Compatibility
