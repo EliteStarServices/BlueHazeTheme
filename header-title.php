@@ -64,7 +64,7 @@ $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 if ( has_custom_logo() ) {
 		echo "<a href='".esc_url(home_url('/'))."' title='".esc_attr(get_bloginfo('name', 'display'))."' rel='home'>";
-        echo '<img src="' . esc_url( $logo[0]) . '" style="margin-top:5px;" alt="' . get_bloginfo( 'name' ) . '"></a>';
+        echo '<img src="' . esc_url( $logo[0]) . '" style="margin-top:5px;" class="logo-margins" alt="' . get_bloginfo( 'name' ) . '"></a>';
 } else {
 // DISPLAY NAME AND DESCRIPTION
 ?>
