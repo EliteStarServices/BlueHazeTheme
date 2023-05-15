@@ -84,9 +84,9 @@ if ($avTpl) {
     <div class="row">
         <div class="label"><strong>Select Format</strong></div>
         <div class="fields">
-            <label><input type="checkbox" name="_diwp_checkbox_field[]" value="wide" <?php if(in_array('wide', $diwp_checkboxfield)) echo 'checked'; ?> /> Full Width Page</label>
-            <br><label><input type="checkbox" name="_diwp_checkbox_field[]" value="head" <?php if(in_array('head', $diwp_checkboxfield)) echo 'checked'; ?>/> Disable Header</label>
-            <br><label><input type="checkbox" name="_diwp_checkbox_field[]" value="foot" <?php if(in_array('foot', $diwp_checkboxfield)) echo 'checked'; ?>/> Simple Footer</label>
+            <label><input type="checkbox" name="_diwp_checkbox_field[]" value="wide" <?php if (!empty($diwp_checkboxfield) && (in_array('wide', $diwp_checkboxfield))) echo 'checked'; ?> /> Full Width Page</label>
+            <br><label><input type="checkbox" name="_diwp_checkbox_field[]" value="head" <?php if (!empty($diwp_checkboxfield) && (in_array('head', $diwp_checkboxfield))) echo 'checked'; ?>/> Disable Header</label>
+            <br><label><input type="checkbox" name="_diwp_checkbox_field[]" value="foot" <?php if (!empty($diwp_checkboxfield) && (in_array('foot', $diwp_checkboxfield))) echo 'checked'; ?>/> Simple Footer</label>
         </div>
     </div>
 
