@@ -6,6 +6,7 @@
 2023-xx-xx
 
 * More Post Template Adjustments
+* Add logo-margins Class
 * PHP 8 Compatibility
 
 ### v0.9.9.8
