@@ -350,9 +350,11 @@ if( class_exists( 'Classic_Editor' ) ) {
         // support responsive embeds for front-end ( https://wordpress.org/gutenberg/handbook/designers-developers/developers/themes/theme-support/#responsive-embedded-content )
         add_theme_support('responsive-embeds');
     // END GUTENBERG SUPPORT CODE ----------------------------------------------------------------------------------------
+
+
     require_once get_template_directory() . '/inc/BootstrapBasicWp5.php';
-    $BbWp5 = new BootstrapBasicWp5();
-    unset($BbWp5);
+    //$BbWp5 = new BootstrapBasicWp5();
+    //unset($BbWp5);
 
 
     /*
@@ -367,6 +369,7 @@ if( class_exists( 'Classic_Editor' ) ) {
 
     
 }
+
 
 
 
@@ -417,13 +420,12 @@ function theme_support_options() {
        ) );
    
 
-       /*
+// This was blocked, but I am not sure why - it controls headfer background color
        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
            'label'    => __( 'Header Color', 'blue-haze' ),
            'section'  => 'header_section',
            'settings' => 'header_bg',
        ) ) );
-       */
 
        
        $wp_customize->add_setting( 'header_rd' , array(
