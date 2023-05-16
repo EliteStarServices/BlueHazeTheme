@@ -11,6 +11,8 @@
 $sb_opt = get_post_meta( get_the_ID(), '_diwp_radio_field', true );
 $ct_opt = get_post_meta( get_the_ID(), '_diwp_radio_two', true );
 $bh_opt = get_post_meta( get_the_ID(), '_diwp_checkbox_field', true );
+// php8 needs the array $bh_opt to exist
+if (!$bh_opt) { $bh_opt = array("empty"); }
 $do_php = get_post_meta( get_the_ID(), '_diwp_text_field', true );
 
 

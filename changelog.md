@@ -3,10 +3,11 @@
 ---
 
 ### v0.9.9.9 / v1.0
-2023-xx-xx
+2023-x-x
 
 * More Post Template Adjustments
-* Add logo-margins Class
+* Add logo-margins Class option
+* ClassicPress Compatibility
 * PHP 8 Compatibility
 
 ### v0.9.9.8

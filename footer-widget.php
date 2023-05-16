@@ -4,6 +4,18 @@
  */
 ?>
 
+
+<?php
+// CHECK: ClassicPress or WordPress
+global $cp_version;
+if (!$cp_version) {
+	$cmsLink = '<a href="https://wordpress.org">WordPress</a>';
+} else {
+	$cmsLink = '<a href="https://classicpress.net">ClassicPress</a>';
+}
+?>
+
+
 </div><!--.site-content-->
 			
 			
@@ -14,7 +26,7 @@
 							<div class="container-fluid">
 							<hr class="footer-thin">
 								<div class="text-center center-block">
-							<p class="txt-railway"><a href="https://elite-star-services.com/blue-haze/">Blue Haze</a> for <a href="https://wordpress.org">WordPress</a></p>
+							<p class="txt-railway"><a href="https://elite-star-services.com/blue-haze/">Blue Haze</a> for <?php echo $cmsLink; ?></p>
 								</div>
 							</div>
 						<?php } ?> 
