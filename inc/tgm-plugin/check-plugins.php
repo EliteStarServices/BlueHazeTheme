@@ -62,6 +62,16 @@ function blue_haze_register_required_plugins()
 	 */
 
 
+	// php8 needs $plugins to exist, this is a dummy entry
+	$plugins = array(
+		array(
+			'name'      => '',
+			'slug'      => '',
+		),
+	);
+
+
+
 	// NORMAL PLUGIN NOTIFICATION LIST **DISABLED**
 	/*
 	$plugins = array(
@@ -133,8 +143,7 @@ function blue_haze_register_required_plugins()
 	// EXTENDED PLUGIN LIST OPTION
 	$extraPI = myprefix_get_theme_option('more_plugins');
 	if ($extraPI != "") {
-		//$exPlugs = array(
-		$plugins = array(
+		$exPlugs = array(
 
 			// This is an example of how to include a plugin from an arbitrary external source in your theme.
 			array(
@@ -198,7 +207,7 @@ function blue_haze_register_required_plugins()
 				'required'  => false,
 			),
 		);
-		//$plugins=array_merge($plugins,$exPlugs);
+		$plugins=array_merge($plugins,$exPlugs);
 	}
 
 
@@ -315,5 +324,6 @@ function blue_haze_register_required_plugins()
 		*/
 	);
 
+	//if (!$plugins) { $plugins = array(); }
 	tgmpa($plugins, $config);
 }
