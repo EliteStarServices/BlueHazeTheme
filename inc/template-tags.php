@@ -15,7 +15,12 @@ if (!function_exists('bootstrapBasicCategoriesList')) {
      */
     function bootstrapBasicCategoriesList($categories_list = '') 
     {
-        return sprintf('<span class="categories-icon glyphicon glyphicon-th-list" title="' . __('Posted in', 'bootstrap-basic') . '"></span> %1$s', $categories_list);
+        $edit_post_link = get_edit_post_link();
+        if ($edit_post_link != null) {
+            return sprintf('<span class="categories-icon glyphicon glyphicon-th-list" title="' . __('Posted in', 'bootstrap-basic') . '"></span> %1$s', $categories_list);
+        } else {
+            return sprintf('<span class="categories-icon glyphicon glyphicon-th-list" style="margin-left:5px;" title="' . __('Posted in', 'bootstrap-basic') . '"></span> %1$s', $categories_list);
+        }
     }// bootstrapBasicCategoriesList
 }
 

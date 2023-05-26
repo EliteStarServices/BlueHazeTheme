@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file represents an example of the code that themes would use to register
  * the required plugins.
@@ -33,7 +34,7 @@
  */
 require_once get_template_directory() . '/inc/tgm-plugin/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'blue_haze_register_required_plugins' );
+add_action('tgmpa_register', 'blue_haze_register_required_plugins');
 
 /**
  * Register the required plugins for this theme.
@@ -53,14 +54,18 @@ add_action( 'tgmpa_register', 'blue_haze_register_required_plugins' );
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
 
-function blue_haze_register_required_plugins() {
+function blue_haze_register_required_plugins()
+{
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
+
+
+	// NORMAL PLUGIN NOTIFICATION LIST **DISABLED**
+	/*
 	$plugins = array(
 
-/*
 		// This is an example of how to include a plugin bundled with a theme.
 		array(
 			'name'               => 'TGM Example Plugin', // The plugin name.
@@ -73,7 +78,13 @@ function blue_haze_register_required_plugins() {
 			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
-*/
+
+		// This is an example of how to include a plugin from the WordPress Plugin Repository.
+		array(
+			'name'      => 'Better Font Awesome',
+			'slug'      => 'better-font-awesome',
+			'required'  => false,
+		),
 
 		// This is an example of how to include a plugin from an arbitrary external source in your theme.
 		array(
@@ -93,7 +104,6 @@ function blue_haze_register_required_plugins() {
 			'external_url' => 'https://cs.elite-star-services.com/wp-repo/?action=download&slug=bh-plugin-tools', // If set, overrides default API URL and points to an external URL.
 		),
 		
-/*
 		// This is an example of how to include a plugin from a GitHub repository in your theme.
 		// This presumes that the plugin code is based in the root of the GitHub repository
 		// and not in a subdirectory ('/src') of the repository.
@@ -103,16 +113,7 @@ function blue_haze_register_required_plugins() {
 			'source'    => 'https://github.com/jrfnl/WP-adminbar-comments-to-pending/archive/master.zip',
 			'external_url' => 'https://github.com/jrfnl/WP-adminbar-comments-to-pending/archive/master.zip', // If set, overrides default API URL and points to an external URL.
 		),
-*/
 
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'Classic Editor',
-			'slug'      => 'classic-editor',
-			'required'  => false,
-		),
-
-/*
 		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
 		// have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
 		// 'wordpress-seo-premium'.
@@ -124,100 +125,95 @@ function blue_haze_register_required_plugins() {
 			'slug'        => 'wordpress-seo',
 			'is_callable' => 'wpseo_init',
 		),
-*/
 
 	);
+	*/
 
 
+	// EXTENDED PLUGIN LIST OPTION
+	$extraPI = myprefix_get_theme_option('more_plugins');
+	if ($extraPI != "") {
+		//$exPlugs = array(
+		$plugins = array(
 
-// EXTENDED PLUGIN LIST OPTION
-$extraPI = myprefix_get_theme_option( 'more_plugins' );
-if ($extraPI != "") { 
-	$exPlugs = array(
+			// This is an example of how to include a plugin from an arbitrary external source in your theme.
+			array(
+				'name'         => 'BH Menu Icons', // The plugin name.
+				'slug'         => 'bh-menu-icons', // The plugin slug (typically the folder name).
+				'source'       => 'https://cs.elite-star-services.com/wp-repo/?action=download&slug=bh-menu-icons', // The plugin source.
+				'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+				'external_url' => 'https://cs.elite-star-services.com/wp-repo/?action=download&slug=bh-menu-icons', // If set, overrides default API URL and points to an external URL.
+			),
 
-		// This is an example of how to include a plugin from an arbitrary external source in your theme.
-		array(
-			'name'         => 'BH Widget Title Class', // The plugin name.
-			'slug'         => 'bh-widget-title-class', // The plugin slug (typically the folder name).
-			'source'       => 'https://cs.elite-star-services.com/wp-repo/?action=download&slug=bh-widget-title-class', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://cs.elite-star-services.com/wp-repo/?action=download&slug=bh-widget-title-class', // If set, overrides default API URL and points to an external URL.
-		),
+			// This is an example of how to include a plugin from an arbitrary external source in your theme.
+			array(
+				'name'         => 'BH Plugin Tools', // The plugin name.
+				'slug'         => 'bh-plugin-tools', // The plugin slug (typically the folder name).
+				'source'       => 'https://cs.elite-star-services.com/wp-repo/?action=download&slug=bh-plugin-tools', // The plugin source.
+				'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+				'external_url' => 'https://cs.elite-star-services.com/wp-repo/?action=download&slug=bh-plugin-tools', // If set, overrides default API URL and points to an external URL.
+			),
 
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'Widget CSS Classes',
-			'slug'      => 'widget-css-classes',
-			'required'  => false,
-		),
+			// This is an example of how to include a plugin from an arbitrary external source in your theme.
+			array(
+				'name'         => 'BH Widget Title Class', // The plugin name.
+				'slug'         => 'bh-widget-title-class', // The plugin slug (typically the folder name).
+				'source'       => 'https://cs.elite-star-services.com/wp-repo/?action=download&slug=bh-widget-title-class', // The plugin source.
+				'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+				'external_url' => 'https://cs.elite-star-services.com/wp-repo/?action=download&slug=bh-widget-title-class', // If set, overrides default API URL and points to an external URL.
+			),
 
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'Better Font Awesome',
-			'slug'      => 'better-font-awesome',
-			'required'  => false,
-		),
+			// This is an example of how to include a plugin from the WordPress Plugin Repository.
+			array(
+				'name'      => 'Widget CSS Classes',
+				'slug'      => 'widget-css-classes',
+				'required'  => false,
+			),
 
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'Custom Classes',
-			'slug'      => 'custom-classes',
-			'required'  => false,
-		),
+			// This is an example of how to include a plugin from the WordPress Plugin Repository.
+			array(
+				'name'      => 'Better Font Awesome',
+				'slug'      => 'better-font-awesome',
+				'required'  => false,
+			),
 
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'Custom Sidebars',
-			'slug'      => 'custom-sidebars',
-			'required'  => false,
-		),
+			// This is an example of how to include a plugin from the WordPress Plugin Repository.
+			array(
+				'name'      => 'Custom Classes',
+				'slug'      => 'custom-classes',
+				'required'  => false,
+			),
 
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'Conditional Menus',
-			'slug'      => 'conditional-menus',
-			'required'  => false,
-		),
+			// This is an example of how to include a plugin from the WordPress Plugin Repository.
+			array(
+				'name'      => 'Custom Sidebars',
+				'slug'      => 'custom-sidebars',
+				'required'  => false,
+			),
 
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'Optimize Database',
-			'slug'      => 'rvg-optimize-database',
-			'required'  => false,
-		),
+			// This is an example of how to include a plugin from the WordPress Plugin Repository.
+			array(
+				'name'      => 'Conditional Menus',
+				'slug'      => 'conditional-menus',
+				'required'  => false,
+			),
+		);
+		//$plugins=array_merge($plugins,$exPlugs);
+	}
 
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'Page Links To',
-			'slug'      => 'page-links-to',
-			'required'  => false,
-		),
 
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'Wordfence Security',
-			'slug'      => 'wordfence',
-			'required'  => false,
-		),
-
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'WP Mail SMTP',
-			'slug'      => 'wp-mail-smtp',
-			'required'  => false,
-		),
-
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'WPCode Lite',
-			'slug'      => 'insert-headers-and-footers',
-			'required'  => false,
-		),
-
-	);
-$plugins=array_merge($plugins,$exPlugs);
-}
-
+	// OFFER CLASSIC EDITOR IF WORDPRESS
+	global $cp_version;
+	if (!$cp_version) {
+		$exPlugs = array(
+			array(
+				'name'      => 'Classic Editor',
+				'slug'      => 'classic-editor',
+				'required'  => false,
+			),
+		);
+		$plugins = array_merge($plugins, $exPlugs);
+	}
 
 
 	/*
@@ -319,5 +315,5 @@ $plugins=array_merge($plugins,$exPlugs);
 		*/
 	);
 
-	tgmpa( $plugins, $config );
+	tgmpa($plugins, $config);
 }

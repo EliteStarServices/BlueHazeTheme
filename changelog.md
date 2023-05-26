@@ -2,11 +2,12 @@
 
 ---
 
-### v0.9.9.9 / v1.0
-2023-x-x
+### v1.0
+2023-05-27
 
 * More Post Template Adjustments
 * Add logo-margins Class option
+* Change Plugin Notification Method
 * ClassicPress Compatibility
 * PHP 8 Compatibility
 

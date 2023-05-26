@@ -2,7 +2,7 @@
 Author: Elite Star Services
 Author URI: https://elite-star-services.com
 Donate link: https://www.paypal.com/donate/?hosted_button_id=P3CXN3JZVSVG2
-Requires at least: 4.0
+Requires at least: 4.9
 Tested up to: 6.2
 License: GPL v3
 License URI: https://elite-star-services.com/license/
@@ -22,11 +22,12 @@ This theme can use all Bootstrap classes, elements and styles.
 
 ==Changelog==
 
-### v0.9.9.9 / v1.0
-2023-x-x
+### v1.0
+2023-05-27
 
 * More Post Template Adjustments
 * Add logo-margins Class option
+* Change Plugin Notification Method
 * ClassicPress Compatibility
 * PHP 8 Compatibility
 

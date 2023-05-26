@@ -15,7 +15,7 @@ if (post_password_required()) {
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if (have_comments()) { ?>
-		<h2 class="comments-title">
+		<h3 class="comments-title">
 			<?php
 			printf(
 				/* translators: %1$s: Number of comments, %2$s: Post title. */
@@ -30,7 +30,7 @@ if (post_password_required()) {
 				'<span>' . get_the_title() . '</span>'
 			);
 			?> 
-		</h2>
+		</h3>
 
 		<?php if (get_comment_pages_count() > 1 && get_option('page_comments')) { // are there comments to navigate through  ?> 
 			<h3 class="screen-reader-text sr-only"><?php _e('Comment navigation', 'bootstrap-basic'); ?></h3>
