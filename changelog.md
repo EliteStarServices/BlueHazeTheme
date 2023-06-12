@@ -6,7 +6,9 @@
 2023-xx-xx
 
 * PHP 8 Compatibility
-* Code Cleanup
+* Security Improvements
+* Translation Improvements
+* General Code Cleanup
 
 ### v1.0
 2023-05-27

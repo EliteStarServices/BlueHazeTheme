@@ -1,6 +1,6 @@
 <?php
 
-/* Template Name: Default wide */
+/* Template Name: Default Wide */
 
 get_header('title');
 
