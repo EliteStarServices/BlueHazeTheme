@@ -17,7 +17,7 @@
 		 * The other part of this pager is in inc/template-tags.php function name bootstrapBasicLinkPagesLink() which is called by wp_link_pages_link filter.
 		 */
 		wp_link_pages(array(
-			'before' => '<div class="page-links">' . __('Pages:', 'bootstrap-basic') . ' <ul class="pagination">',
+			'before' => '<div class="page-links">' . __('Pages:', 'blue-haze') . ' <ul class="pagination">',
 			'after'  => '</ul></div>',
 			'separator' => ''
 		));
@@ -27,10 +27,10 @@
 	<footer class="entry-meta">
 		<?php
 			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list(__(', ', 'bootstrap-basic'));
+			$category_list = get_the_category_list(__(', ', 'blue-haze'));
 
 			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list('', __(', ', 'bootstrap-basic'));
+			$tag_list = get_the_tag_list('', __(', ', 'blue-haze'));
 			
 			echo bootstrapBasicCategoriesList($category_list);
 			if ($tag_list) {
@@ -39,7 +39,7 @@
 			}
 			echo ' ';
 			/* translators: %1$s URL, %2$s: Post title. */
-			printf(__('<span class="glyphicon glyphicon-link"></span> <a href="%1$s" title="Permalink to %2$s" rel="bookmark">permalink</a>.', 'bootstrap-basic'), get_permalink(), the_title_attribute('echo=0'));
+			printf(__('<span class="glyphicon glyphicon-link"></span> <a href="%1$s" title="Permalink to %2$s" rel="bookmark">permalink</a>.', 'blue-haze'), get_permalink(), the_title_attribute('echo=0'));
 		?> 
 
 		<?php bootstrapBasicEditPostLink(); ?> 

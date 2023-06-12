@@ -24,8 +24,8 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
         {
             parent::__construct(
                     'bootstrapbasic_search_widget', // base ID
-                    __('Bootstrap Navbar Search', 'bootstrap-basic'), 
-                    array('description' => __('Display Search widget for Bootstrap navbar.', 'bootstrap-basic'))
+                    __('Bootstrap Navbar Search', 'blue-haze'), 
+                    array('description' => __('Display Search widget for Bootstrap navbar.', 'blue-haze'))
             );
         }// __construct
 
@@ -47,10 +47,10 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
 
             // output form
             $output = '<p>';
-            $output .= '<label for="' . $this->get_field_id('navbaralign') . '">' . __('Form alignment:', 'bootstrap-basic') . '</label>';
+            $output .= '<label for="' . $this->get_field_id('navbaralign') . '">' . __('Form alignment:', 'blue-haze') . '</label>';
             $output .= '<select id="' . $this->get_field_id('navbaralign') . '" name="' . $this->get_field_name('navbaralign') . '">';
-            $output .= '<option value="navbar-left"' . ($navbaralign == 'navbar-left' ? ' selected="selected"' : '') . '>' . __('Left', 'bootstrap-basic') . '</option>';
-            $output .= '<option value="navbar-right"' . ($navbaralign == 'navbar-right' ? ' selected="selected"' : '') . '>' . __('Right', 'bootstrap-basic') . '</option>';
+            $output .= '<option value="navbar-left"' . ($navbaralign == 'navbar-left' ? ' selected="selected"' : '') . '>' . __('Left', 'blue-haze') . '</option>';
+            $output .= '<option value="navbar-right"' . ($navbaralign == 'navbar-right' ? ' selected="selected"' : '') . '>' . __('Right', 'blue-haze') . '</option>';
             $output .= '</select>';
             $output .= '</p>';
 

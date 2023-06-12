@@ -22,6 +22,12 @@ This theme can use all Bootstrap classes, elements and styles.
 
 ==Changelog==
 
+### v1.0.1
+2023-xx-xx
+
+* PHP 8 Compatibility
+* Code Cleanup
+
 ### v1.0
 2023-05-27
 

@@ -17,9 +17,9 @@ if (!function_exists('bootstrapBasicCategoriesList')) {
     {
         $edit_post_link = get_edit_post_link();
         if ($edit_post_link != null) {
-            return sprintf('<span class="categories-icon glyphicon glyphicon-th-list" title="' . __('Posted in', 'bootstrap-basic') . '"></span> %1$s', $categories_list);
+            return sprintf('<span class="categories-icon glyphicon glyphicon-th-list" title="' . __('Posted in', 'blue-haze') . '"></span> %1$s', $categories_list);
         } else {
-            return sprintf('<span class="categories-icon glyphicon glyphicon-th-list" style="margin-left:5px;" title="' . __('Posted in', 'bootstrap-basic') . '"></span> %1$s', $categories_list);
+            return sprintf('<span class="categories-icon glyphicon glyphicon-th-list" style="margin-left:5px;" title="' . __('Posted in', 'blue-haze') . '"></span> %1$s', $categories_list);
         }
     }// bootstrapBasicCategoriesList
 }
@@ -44,9 +44,9 @@ if (!function_exists('bootstrapBasicComment')) {
             echo '>';
             echo '<div class="comment-body media">';
                 echo '<div class="media-body">';
-                    _e('Pingback:', 'bootstrap-basic');
+                    _e('Pingback:', 'blue-haze');
                     comment_author_link(); 
-                    edit_comment_link(__('Edit', 'bootstrap-basic'), '<span class="edit-link">', '</span>');
+                    edit_comment_link(__('Edit', 'blue-haze'), '<span class="edit-link">', '</span>');
                 echo '</div>';
             echo '</div>';
         } else {
@@ -81,27 +81,27 @@ if (!function_exists('bootstrapBasicComment')) {
                             comment_time('c');
                         echo '">';
                         /* translators: %1$s: Comment date, %2$s: Comment time. */
-                        printf(_x('%1$s at %2$s', '1: date, 2: time', 'bootstrap-basic'), get_comment_date(), get_comment_time());
+                        printf(_x('%1$s at %2$s', '1: date, 2: time', 'blue-haze'), get_comment_date(), get_comment_time());
                         echo '</time>';
                         echo '</a>';
                         // end date-time
 
                         echo ' ';
 
-                        edit_comment_link('<span class="fa fa-pencil-square-o "></span>' . __('Edit', 'bootstrap-basic'), '<span class="edit-link">', '</span>');
+                        edit_comment_link('<span class="fa fa-pencil-square-o "></span>' . __('Edit', 'blue-haze'), '<span class="edit-link">', '</span>');
 
                         echo '</div><!-- .comment-metadata -->';
 
                         // if comment was not approved
                         if ('0' == $comment->comment_approved) {
                             echo '<div class="comment-awaiting-moderation text-warning"> <span class="glyphicon glyphicon-info-sign"></span> ';
-                                _e('Your comment is awaiting moderation.', 'bootstrap-basic');
+                                _e('Your comment is awaiting moderation.', 'blue-haze');
                             echo '</div>';
                         } //endif;
 
                         // comment author says
                         /* translators: %s: Comment author link. */
-                        printf(__('%s <span class="says">says:</span>', 'bootstrap-basic'), sprintf('<cite class="fn">%s</cite>', get_comment_author_link()));
+                        printf(__('%s <span class="says">says:</span>', 'blue-haze'), sprintf('<cite class="fn">%s</cite>', get_comment_author_link()));
                     echo '</div><!-- .comment-author -->';
 
                     // comment content body
@@ -113,8 +113,8 @@ if (!function_exists('bootstrapBasicComment')) {
                         'add_below' => 'div-comment',
                         'depth'     => $depth,
                         'max_depth' => $args['max_depth'],
-                        'reply_text' => '<span class="fa fa-reply"></span> ' . __('Reply', 'bootstrap-basic'),
-                        'login_text' => '<span class="fa fa-reply"></span> ' . __('Log in to Reply', 'bootstrap-basic')
+                        'reply_text' => '<span class="fa fa-reply"></span> ' . __('Reply', 'blue-haze'),
+                        'login_text' => '<span class="fa fa-reply"></span> ' . __('Log in to Reply', 'blue-haze')
                     )));
                     // end reply link
                 echo '</div><!-- .comment-content -->';
@@ -149,7 +149,7 @@ if (!function_exists('bootstrapBasicEditPostLink')) {
     {
         $edit_post_link = get_edit_post_link();
         if ($edit_post_link != null) {
-            $edit_btn = '<a class="post-edit-link btn btn-default btn-xs" href="'.$edit_post_link.'" title="' . __('Edit', 'bootstrap-basic') . '"><i class="edit-post-icon glyphicon glyphicon-pencil" title="' . __('Edit', 'bootstrap-basic') . '"></i></a>';
+            $edit_btn = '<a class="post-edit-link btn btn-default btn-xs" href="'.$edit_post_link.'" title="' . __('Edit', 'blue-haze') . '"><i class="edit-post-icon glyphicon glyphicon-pencil" title="' . __('Edit', 'blue-haze') . '"></i></a>';
             unset($edit_post_link);
             echo $edit_btn;
         }
@@ -199,7 +199,7 @@ if (!function_exists('bootstrapBasicMoreLinkText')) {
      */
     function bootstrapBasicMoreLinkText() 
     {
-        return __('Continue reading <span class="meta-nav">&rarr;</span>', 'bootstrap-basic');
+        return __('Continue reading <span class="meta-nav">&rarr;</span>', 'blue-haze');
     }// bootstrapBasicMoreLinkText
 }
 
@@ -275,7 +275,7 @@ if (!function_exists('bootstrapBasicPostOn')) {
         );
 
         /* translators: %1$s: Link to post with date/time text, %2$s: Link to author with auth name. */
-        printf(__('<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'bootstrap-basic'),
+        printf(__('<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'blue-haze'),
             sprintf('<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
                 esc_url(get_permalink()),
                 esc_attr(get_the_time()),
@@ -284,7 +284,7 @@ if (!function_exists('bootstrapBasicPostOn')) {
             sprintf('<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
                 esc_url(get_author_posts_url(get_the_author_meta('ID'))),
                 /* translators: %s Author name. */
-                esc_attr(sprintf(__('View all posts by %s', 'bootstrap-basic'), get_the_author())),
+                esc_attr(sprintf(__('View all posts by %s', 'blue-haze'), get_the_author())),
                 esc_html(get_the_author())
             )
         );
@@ -301,7 +301,7 @@ if (!function_exists('bootstrapBasicTagsList')) {
      */
     function bootstrapBasicTagsList($tags_list = '') 
     {
-        return sprintf('<span class="tags-icon glyphicon glyphicon-tags" title="' . __('Tagged', 'bootstrap-basic') . '"></span>&nbsp; %1$s', $tags_list);
+        return sprintf('<span class="tags-icon glyphicon glyphicon-tags" title="' . __('Tagged', 'blue-haze') . '"></span>&nbsp; %1$s', $tags_list);
     }// bootstrapBasicTagsList
 }
 

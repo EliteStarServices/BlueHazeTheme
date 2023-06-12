@@ -28,7 +28,7 @@ if (esc_html( get_theme_mod('header_ap') == "1") ) {
 									<?php
 										$metadata = wp_get_attachment_metadata();
 										/* translators: %1$s: Date/time in datetime attribute, %2$s: Readable date/time, %3$s: URL, %4$s: Attachment width, %5$s: Attachment height, %6$s: Link to post parent, %7$s: Post parent title in the title attribute, %8$s: Post parent title. */
-										printf(__('Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'bootstrap-basic'),
+										printf(__('Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'blue-haze'),
 											esc_attr(get_the_date('c')),
 											esc_html(get_the_date()),
 											esc_url(wp_get_attachment_url()),
@@ -41,13 +41,13 @@ if (esc_html( get_theme_mod('header_ap') == "1") ) {
 
 										echo ' ';
 										bootstrapBasicEditPostLink();
-										// edit_post_link(__('Edit', 'bootstrap-basic'), '<span class="edit-link">', '</span>');
+										// edit_post_link(__('Edit', 'blue-haze'), '<span class="edit-link">', '</span>');
 									?> 
 								</div><!-- .entry-meta -->
 
 								<ul role="navigation" id="image-navigation" class="image-navigation pager">
-									<li class="nav-previous previous"><?php previous_image_link(false, __('<span class="meta-nav">&larr;</span> Previous', 'bootstrap-basic')); ?></li>
-									<li class="nav-next next"><?php next_image_link(false, __('Next <span class="meta-nav">&rarr;</span>', 'bootstrap-basic')); ?></li>
+									<li class="nav-previous previous"><?php previous_image_link(false, __('<span class="meta-nav">&larr;</span> Previous', 'blue-haze')); ?></li>
+									<li class="nav-next next"><?php next_image_link(false, __('Next <span class="meta-nav">&rarr;</span>', 'blue-haze')); ?></li>
 								</ul><!-- #image-navigation -->
 							</header><!-- .entry-header -->
 
@@ -76,7 +76,7 @@ if (esc_html( get_theme_mod('header_ap') == "1") ) {
 								*/
 								/* 
 								wp_link_pages(array(
-									   'before' => '<div class="page-links">' . __('Pages:', 'bootstrap-basic') . ' <ul class="pagination">',
+									   'before' => '<div class="page-links">' . __('Pages:', 'blue-haze') . ' <ul class="pagination">',
 									   'after'  => '</ul></div>',
 									   'separator' => ''
 								));

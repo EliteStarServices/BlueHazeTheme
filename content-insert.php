@@ -35,7 +35,7 @@
 		 * The other part of this pager is in inc/template-tags.php function name bootstrapBasicLinkPagesLink() which is called by wp_link_pages_link filter.
 		 */
 		wp_link_pages(array(
-			'before' => '<div class="page-links">' . __('Pages:', 'bootstrap-basic') . ' <ul class="pagination">',
+			'before' => '<div class="page-links">' . __('Pages:', 'blue-haze') . ' <ul class="pagination">',
 			'after'  => '</ul></div>',
 			'separator' => ''
 		));

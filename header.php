@@ -49,7 +49,7 @@ if ($is_assigned) {
 					<nav class="navbar navbar-default" role="navigation">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-primary-collapse">
-								<span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>
+								<span class="sr-only"><?php _e('Toggle navigation', 'blue-haze'); ?></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>

@@ -13,11 +13,11 @@ if (esc_html( get_theme_mod('header_ap') == "1") ) {
 					<main id="main" class="site-main" role="main">
 						<section class="error-404 not-found">
 							<header class="page-header">
-								<h1 class="page-title"><?php _e('Oops! That page can&rsquo;t be found.', 'bootstrap-basic'); ?></h1>
+								<h1 class="page-title"><?php _e('Oops! That page can&rsquo;t be found.', 'blue-haze'); ?></h1>
 							</header><!-- .page-header -->
 
 							<div class="page-content">
-								<p><?php _e('Nothing is found at this location. If something was here, it has gone missing now | Please try a Search.', 'bootstrap-basic'); ?></p>
+								<p><?php _e('Nothing is found at this location. If something was here, it has gone missing now | Please try a Search.', 'blue-haze'); ?></p>
 
 								<?php echo bootstrapBasicFullPageSearchForm(); ?> 
 <!--
@@ -27,7 +27,7 @@ if (esc_html( get_theme_mod('header_ap') == "1") ) {
 									</div>
 									<div class=" col-sm-6 col-md-3">
 										<div class="widget widget_categories">
-											<h2 class="widgettitle"><?php _e('Most Used Categories', 'bootstrap-basic'); ?></h2>
+											<h2 class="widgettitle"><?php _e('Most Used Categories', 'blue-haze'); ?></h2>
 											<ul>
 												<?php
 												wp_list_categories(array(
@@ -44,7 +44,7 @@ if (esc_html( get_theme_mod('header_ap') == "1") ) {
 									<div class=" col-sm-6 col-md-3">
 										<?php
 										/* translators: %1$s: smiley */
-										$archive_content = '<p>' . sprintf(__('Try looking in the monthly archives. %1$s', 'bootstrap-basic'), convert_smilies(':)')) . '</p>';
+										$archive_content = '<p>' . sprintf(__('Try looking in the monthly archives. %1$s', 'blue-haze'), convert_smilies(':)')) . '</p>';
 										the_widget('WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content");
 										?> 
 									</div>

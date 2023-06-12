@@ -10,7 +10,7 @@ if (!class_exists('BootstrapBasicAdminHelp')) {
          */
         public function themeHelpMenu()
         {
-            add_theme_page(__('Blue Haze Info', 'bootstrap-basic'), __('Blue Haze Info', 'bootstrap-basic'), 'edit_posts', 'theme_help', array($this, 'themeHelpPage'));
+            add_theme_page(__('Blue Haze Info', 'blue-haze'), __('Blue Haze Info', 'blue-haze'), 'edit_posts', 'theme_help', array($this, 'themeHelpPage'));
         }// themeHelpMenu
 
 

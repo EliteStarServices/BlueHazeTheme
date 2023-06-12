@@ -12,6 +12,7 @@ $sb_opt = get_post_meta( get_the_ID(), '_diwp_radio_field', true );
 $ct_opt = get_post_meta( get_the_ID(), '_diwp_radio_two', true );
 $bh_opt = get_post_meta( get_the_ID(), '_diwp_checkbox_field', true );
 $do_php = get_post_meta( get_the_ID(), '_diwp_text_field', true );
+if (!$bh_opt) { $bh_opt = array('dummy'); }
 
 
 // Sidebar Options

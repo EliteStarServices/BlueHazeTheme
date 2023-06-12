@@ -24,8 +24,8 @@ if (!class_exists('BootstrapBasicLegacySearchWidget')) {
         {
             parent::__construct(
                     'bootstrapbasic_legacysearch_widget', // base ID
-                    __('Bootstrap Legacy Search', 'bootstrap-basic'), 
-                    array('description' => __('Display Search widget for Bootstrap that can be use in sidebar.', 'bootstrap-basic'))
+                    __('Bootstrap Legacy Search', 'blue-haze'), 
+                    array('description' => __('Display Search widget for Bootstrap that can be use in sidebar.', 'blue-haze'))
             );
         }// __construct
 
@@ -45,7 +45,7 @@ if (!class_exists('BootstrapBasicLegacySearchWidget')) {
 
             // output form
             $output = '<p>';
-            $output .= '<label for="' . $this->get_field_id('bootstrapbasic-legacysearch-widget-title') . '">' . __('Title:', 'bootstrap-basic') . '</label>';
+            $output .= '<label for="' . $this->get_field_id('bootstrapbasic-legacysearch-widget-title') . '">' . __('Title:', 'blue-haze') . '</label>';
             $output .= '<input id="' . $this->get_field_id('bootstrapbasic-legacysearch-widget-title') . '" class="widefat" type="text" value="' . esc_attr($this->widget_title) . '" name="' . $this->get_field_name('bootstrapbasic-legacysearch-widget-title') . '">';
             $output .= '</p>';
 

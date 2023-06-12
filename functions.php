@@ -26,7 +26,7 @@ if (!function_exists('bootstrapBasicSetup')) {
          * 
          * copy from underscores theme
          */
-        load_theme_textdomain('bootstrap-basic', get_template_directory() . '/languages');
+        load_theme_textdomain('blue-haze', get_template_directory() . '/languages');
 
         // add theme support title-tag
         add_theme_support('title-tag');
@@ -43,7 +43,7 @@ if (!function_exists('bootstrapBasicSetup')) {
 
         // add support menu
         register_nav_menus(array(
-            'primary' => __('Primary Menu', 'bootstrap-basic'),
+            'primary' => __('Primary Menu', 'blue-haze'),
         ));
 
 
@@ -124,7 +124,7 @@ if (!function_exists('bootstrapBasicWidgetsInit')) {
     function bootstrapBasicWidgetsInit() 
     {
         register_sidebar(array(
-            'name' => __('Sidebar Right', 'bootstrap-basic'),
+            'name' => __('Sidebar Right', 'blue-haze'),
             'id' => 'sidebar-right',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget' => '</aside>',
@@ -133,7 +133,7 @@ if (!function_exists('bootstrapBasicWidgetsInit')) {
         ));
 
         register_sidebar(array(
-            'name' => __('Sidebar Left', 'bootstrap-basic'),
+            'name' => __('Sidebar Left', 'blue-haze'),
             'id' => 'sidebar-left',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget' => '</aside>',
@@ -142,9 +142,9 @@ if (!function_exists('bootstrapBasicWidgetsInit')) {
         ));
 
         register_sidebar(array(
-            'name' => __('Title Header Right', 'bootstrap-basic'),
+            'name' => __('Title Header Right', 'blue-haze'),
             'id' => 'header-right',
-            'description' => __('Header widget area on the right side next to site title.', 'bootstrap-basic'),
+            'description' => __('Header widget area on the right side next to site title.', 'blue-haze'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h1 class="widget-title">',
@@ -152,7 +152,7 @@ if (!function_exists('bootstrapBasicWidgetsInit')) {
         ));
 
         register_sidebar(array(
-            'name' => __('Navigation Right', 'bootstrap-basic'),
+            'name' => __('Navigation Right', 'blue-haze'),
             'id' => 'navbar-right',
             'before_widget' => '',
             'after_widget' => '',
@@ -161,7 +161,7 @@ if (!function_exists('bootstrapBasicWidgetsInit')) {
         ));
 
         register_sidebar(array(
-            'name' => __('Footer Full / Simple', 'bootstrap-basic'),
+            'name' => __('Footer Full / Simple', 'blue-haze'),
             'id' => 'footer-simple',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget' => '</div>',
@@ -170,7 +170,7 @@ if (!function_exists('bootstrapBasicWidgetsInit')) {
         ));
 
         register_sidebar(array(
-            'name' => __('Footer Left', 'bootstrap-basic'),
+            'name' => __('Footer Left', 'blue-haze'),
             'id' => 'footer-left',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget' => '</div>',
@@ -179,7 +179,7 @@ if (!function_exists('bootstrapBasicWidgetsInit')) {
         ));
 
         register_sidebar(array(
-            'name' => __('Footer Right', 'bootstrap-basic'),
+            'name' => __('Footer Right', 'blue-haze'),
             'id' => 'footer-right',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget' => '</div>',
@@ -417,10 +417,10 @@ function theme_support_options() {
        $wp_customize->add_setting( 'header_bg' , array(
            'default'   => '#FFFFFF',
            'transport' => 'refresh',
+           'sanitize_callback'  => 'esc_attr',
        ) );
    
 
-// This was blocked, but I am not sure why - it controls header background color
        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
            'label'    => __( 'Header Color', 'blue-haze' ),
            'section'  => 'header_section',
@@ -431,6 +431,7 @@ function theme_support_options() {
        $wp_customize->add_setting( 'header_rd' , array(
        'default'   => '6',
        'transport' => 'refresh',
+       'sanitize_callback'  => 'esc_attr',
        ) );
 
        $wp_customize->add_control( 'header_rd', array(
@@ -442,22 +443,24 @@ function theme_support_options() {
        $wp_customize->add_setting( 'header_ap', array(
         'default'   => false,
         'transport' => 'refresh',
+        'sanitize_callback'  => 'esc_attr',
          ) );
         
         $wp_customize->add_control( 'header_ap', array(
         'section'   => 'header_section',
-        'label'     => 'Show Header on Internal Templates?',
+        'label'     => __( 'Show Header on Internal Templates?', 'blue-haze' ),
         'type'      => 'checkbox'
         ) );
 
        $wp_customize->add_setting( 'header_mg', array(
         'default'   => false,
         'transport' => 'refresh',
+        'sanitize_callback'  => 'esc_attr',
          ) );
         
         $wp_customize->add_control( 'header_mg', array(
         'section'   => 'header_section',
-        'label'     => 'Adjust Header Margins?',
+        'label'     => __( 'Adjust Header Margins?', 'blue-haze' ),
         'type'      => 'checkbox'
         ) );
 

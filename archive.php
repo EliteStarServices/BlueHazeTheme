@@ -40,7 +40,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 									 */
 									the_post();
 									/* translators: %s Author name. */
-									printf(__('Author: %s', 'bootstrap-basic'), '<span class="vcard">' . get_the_author() . '</span>');
+									printf(__('Author: %s', 'blue-haze'), '<span class="vcard">' . get_the_author() . '</span>');
 									/* 
 									 * Since we called the_post() above, we need to
 									 * rewind the loop back to the beginning that way
@@ -50,33 +50,33 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 
 								elseif (is_day()) :
 									/* translators: %s Date value. */
-									printf(__('Day: %s', 'bootstrap-basic'), '<span>' . get_the_date() . '</span>');
+									printf(__('Day: %s', 'blue-haze'), '<span>' . get_the_date() . '</span>');
 
 								elseif (is_month()) :
 									/* translators: %s Month value. */
-									printf(__('Month: %s', 'bootstrap-basic'), '<span>' . get_the_date('F Y') . '</span>');
+									printf(__('Month: %s', 'blue-haze'), '<span>' . get_the_date('F Y') . '</span>');
 
 								elseif (is_year()) :
 									/* translators: %s Year value. */
-									printf(__('Year: %s', 'bootstrap-basic'), '<span>' . get_the_date('Y') . '</span>');
+									printf(__('Year: %s', 'blue-haze'), '<span>' . get_the_date('Y') . '</span>');
 
 								elseif (is_tax('post_format', 'post-format-aside')) :
-									_e('Asides', 'bootstrap-basic');
+									_e('Asides', 'blue-haze');
 
 								elseif (is_tax('post_format', 'post-format-image')) :
-									_e('Images', 'bootstrap-basic');
+									_e('Images', 'blue-haze');
 
 								elseif (is_tax('post_format', 'post-format-video')) :
-									_e('Videos', 'bootstrap-basic');
+									_e('Videos', 'blue-haze');
 
 								elseif (is_tax('post_format', 'post-format-quote')) :
-									_e('Quotes', 'bootstrap-basic');
+									_e('Quotes', 'blue-haze');
 
 								elseif (is_tax('post_format', 'post-format-link')) :
-									_e('Links', 'bootstrap-basic');
+									_e('Links', 'blue-haze');
 
 								else :
-									_e('Archives', 'bootstrap-basic');
+									_e('Archives', 'blue-haze');
 
 								endif;
 								?> 

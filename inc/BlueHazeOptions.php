@@ -63,8 +63,8 @@ if (!class_exists('WPEX_Theme_Options')) {
 		public static function add_admin_menu()
 		{
 			add_menu_page(
-				esc_html__('Blue Haze Menu', 'text-domain'),
-				esc_html__('Blue Haze Menu', 'text-domain'),
+				esc_html__('Blue Haze Menu', 'blue-haze'),
+				esc_html__('Blue Haze Menu', 'blue-haze'),
 				'manage_options',
 				'theme-settings',
 				array('WPEX_Theme_Options', 'create_admin_page')
@@ -158,7 +158,7 @@ if (!class_exists('WPEX_Theme_Options')) {
 
 			<div class="wrap">
 
-				<h1><?php esc_html_e('Blue Haze Options Menu', 'text-domain'); ?></h1>
+				<h1><?php esc_html_e('Blue Haze Options Menu', 'blue-haze'); ?></h1>
 				<hr>
 
 				<form method="post" action="options.php">
@@ -170,47 +170,47 @@ if (!class_exists('WPEX_Theme_Options')) {
 						<?php // Global Mode 
 						?>
 						<tr valign="top">
-							<th scope="row"><?php esc_html_e('Global Mode', 'text-domain'); ?></th>
+							<th scope="row"><?php esc_html_e('Global Mode', 'blue-haze'); ?></th>
 							<td>
 								<?php $value = self::get_theme_option('global_mode'); ?>
-								<input type="checkbox" name="theme_options[global_mode]" <?php checked($value, 'on'); ?>> <?php esc_html_e('Activate Blue Haze Global Mode', 'text-domain'); ?>
+								<input type="checkbox" name="theme_options[global_mode]" <?php checked($value, 'on'); ?>> <?php esc_html_e('Activate Blue Haze Global Mode', 'blue-haze'); ?>
 							</td>
 						</tr>
 
 						<?php // Disable Visual Editor 
 						?>
 						<tr valign="top">
-							<th scope="row"><?php esc_html_e('Disable Visual Editor', 'text-domain'); ?></th>
+							<th scope="row"><?php esc_html_e('Disable Visual Editor', 'blue-haze'); ?></th>
 							<td>
 								<?php $value = self::get_theme_option('visual_editor'); ?>
-								<input type="checkbox" name="theme_options[visual_editor]" <?php checked($value, 'on'); ?>> <?php esc_html_e('Disable Visual Editor for All Users', 'text-domain'); ?>
+								<input type="checkbox" name="theme_options[visual_editor]" <?php checked($value, 'on'); ?>> <?php esc_html_e('Disable Visual Editor for All Users', 'blue-haze'); ?>
 							</td>
 						</tr>
 
 						<?php // Extend Plugin List 
 						?>
 						<tr valign="top">
-							<th scope="row"><?php esc_html_e('Extended Plugins', 'text-domain'); ?></th>
+							<th scope="row"><?php esc_html_e('Extended Plugins', 'blue-haze'); ?></th>
 							<td>
 								<?php $value = self::get_theme_option('more_plugins'); ?>
-								<input type="checkbox" name="theme_options[more_plugins]" <?php checked($value, 'on'); ?>> <?php esc_html_e('Enable List of Feature Enhancement Plugin Suggestions', 'text-domain'); ?>
+								<input type="checkbox" name="theme_options[more_plugins]" <?php checked($value, 'on'); ?>> <?php esc_html_e('Enable List of Feature Enhancement Plugin Suggestions', 'blue-haze'); ?>
 							</td>
 						</tr>
 
 						<?php // DataTables Support 
 						?>
 						<tr valign="top">
-							<th scope="row"><?php esc_html_e('DataTables Support', 'text-domain'); ?></th>
+							<th scope="row"><?php esc_html_e('DataTables Support', 'blue-haze'); ?></th>
 							<td>
 								<?php $value = self::get_theme_option('data_tables'); ?>
-								<input type="checkbox" name="theme_options[data_tables]" <?php checked($value, 'on'); ?>> <?php esc_html_e('Activate DataTables Support', 'text-domain'); ?>
+								<input type="checkbox" name="theme_options[data_tables]" <?php checked($value, 'on'); ?>> <?php esc_html_e('Activate DataTables Support', 'blue-haze'); ?>
 							</td>
 						</tr>
 
 						<?php // User CSS URL 
 						?>
 						<tr valign="top">
-							<th scope="row"><?php esc_html_e('User CSS File URL', 'text-domain'); ?></th>
+							<th scope="row"><?php esc_html_e('User CSS File URL', 'blue-haze'); ?></th>
 							<td>
 								<?php $value = self::get_theme_option('user_css'); ?>
 								<input type="text" name="theme_options[user_css]" value="<?php echo esc_attr($value); ?>" size="70">
@@ -220,7 +220,7 @@ if (!class_exists('WPEX_Theme_Options')) {
 						<?php // Multiple Select / Post Types 
 						?>
 						<tr valign="top" class="wpex-custom-admin-screen-background-section">
-							<th scope="row"><?php esc_html_e('Offer BH Template', 'text-domain'); ?></th>
+							<th scope="row"><?php esc_html_e('Offer BH Template', 'blue-haze'); ?></th>
 							<td>
 								<?php
 								$value = self::get_theme_option('select_templates');
@@ -264,15 +264,15 @@ if (!class_exists('WPEX_Theme_Options')) {
 						<?php /*
 						<?php // Select example ?>
 						<tr valign="top" class="wpex-custom-admin-screen-background-section">
-							<th scope="row"><?php esc_html_e( 'Select Example', 'text-domain' ); ?></th>
+							<th scope="row"><?php esc_html_e( 'Select Example', 'blue-haze' ); ?></th>
 							<td>
 								<?php $value = self::get_theme_option( 'select_example' ); ?>
 								<select name="theme_options[select_example]">
 									<?php
 									$options = array(
-										'1' => esc_html__( 'Option 1', 'text-domain' ),
-										'2' => esc_html__( 'Option 2', 'text-domain' ),
-										'3' => esc_html__( 'Option 3', 'text-domain' ),
+										'1' => esc_html__( 'Option 1', 'blue-haze' ),
+										'2' => esc_html__( 'Option 2', 'blue-haze' ),
+										'3' => esc_html__( 'Option 3', 'blue-haze' ),
 									);
 									foreach ( $options as $id => $label ) { ?>
 										<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $value, $id, true ); ?>>
