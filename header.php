@@ -38,9 +38,17 @@
 		<?php do_action('before'); ?> 
 
 <?php
-// CHECK FOR PRIMARY MENU AND DISPLAY IF ASSIGNED
+// CHECK FOR PRIMARY MENU AND DISPLAY UNLESS EXCLUDED
 $is_assigned = has_nav_menu('primary');
-if ($is_assigned) {
+
+$checkPage = get_the_title();
+
+global $bh_nomenu;
+if (!$bh_nomenu) { $bh_nomenu = array(); }
+
+//if ($is_assigned) {
+if ($is_assigned && !in_array($checkPage, $bh_nomenu)) {
+    
 ?>
 
 		<header role="banner">

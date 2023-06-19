@@ -98,8 +98,14 @@ if ( has_custom_logo() ) {
 
 
 <?php
-// DISPLAY PRIMARY MENU IF ASSIGNED
-if ($is_assigned) {
+// DISPLAY PRIMARY MENU UNLESS EXCLUDED
+$checkPage = get_the_title();
+
+global $bh_nomenu;
+if (!$bh_nomenu) { $bh_nomenu = array(); }
+
+//if ($is_assigned) {
+if ($is_assigned && !in_array($checkPage, $bh_nomenu)) {
 ?>
 
 				<div class="row main-navigation">

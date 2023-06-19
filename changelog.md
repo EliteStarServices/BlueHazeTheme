@@ -8,6 +8,7 @@
 * PHP 8 Compatibility
 * Security Improvements
 * Translation Improvements
+* Logic to Hide Menu Added
 * General Code Cleanup
 
 ### v1.0
