@@ -3,7 +3,7 @@
 ---
 
 ### v1.0.1
-2023-xx-xx
+2023-07-08
 
 * PHP 8 Compatibility
 * Security Improvements
